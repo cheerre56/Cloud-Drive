@@ -1,0 +1,191 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+.upload-section {
+    flex: 1;
+    text-align: center;
+    margin-right: 20px;
+    max-width: 300px; /* 固定右側上傳文件區域的大小 */
+}
+.file-list-section {
+    position: relative;
+    flex: 1;
+    text-align: left;
+    overflow-y: auto;
+    max-height: 70vh; /* 控制文件列表的高度 */
+    border: 2px dashed #ccc; /* 虛線框 */
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+.create-folder-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 10px;
+    background-color: #ffa200;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.create-folder-btn:hover {
+    background-color: #ff8800;
+}
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+form {
+    margin-bottom: 20px;
+}
+input[type="file"] {
+    display: none;
+}
+label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+label:hover {
+    background-color: #0056b3;
+}
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: #218838;
+}
+.drop-zone {
+    margin-top: 20px;
+    padding: 40px; /* 增加高度 */
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.drop-zone.dragover {
+    background-color: #e9e9e9;
+}
+.file-list {
+    margin-top: 20px;
+}
+.file-item {
+    margin: 10px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* 修改為指針樣式 */
+    transition: background-color 0.3s; /* 添加過渡效果 */
+}
+.file-item:hover {
+    background-color: #e0e0e0; /* 當滑鼠移過時顏色變深 */
+}
+.file-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+.file-item a {
+    color: #007BFF;
+    text-decoration: none;
+}
+.file-item span {
+    word-break: break-all;
+}
+.file-item a:hover {
+    text-decoration: underline;
+
+}
+#searchInput {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.context-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+.context-menu ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+.context-menu ul li {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.context-menu ul li:hover {
+    background-color: #f0f0f0;
+}
+.selected-files {
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    min-height: 50px;
+    text-align: left;
+}
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffc107;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.back-button:hover {
+    background-color: #e0a800;
+}
+
+/* 在文件末尾添加以下樣式 */
+.file-properties {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.file-properties p {
+    margin: 5px 0;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件存取網頁</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="upload-section">
+            <h1>文件存取網頁</h1>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" id="fileInput" name="file" accept=".txt,.pdf,.doc,.docx,.xls,.xlsx,.jpg,.png,.zip" multiple required>
+                <label for="fileInput">選擇文件</label>
+                <button type="submit">上傳文件</button>
+            </form>
+            <div class="selected-files" id="selectedFiles">尚未選擇文件</div>
+            <div class="drop-zone" id="dropZone">拖拽文件到此處上傳</div>
+            <input type="text" id="searchInput" placeholder="輸入關鍵詞搜尋文件">
+        </div>
+        <div class="file-list-section" id="fileListSection">
+            <div id="currentFolderName" style="font-weight: bold; margin-bottom: 10px;"></div>
+            <button class="back-button" id="backButton" style="display: none;">返回</button>
+            <div class="file-list" id="fileList"></div>
+            <button id="createFolderBtn" class="create-folder-btn">創建新文件夾</button>
+        </div>
+    </div>
+
+    <div class="context-menu" id="contextMenu">
+        <ul>
+            <li id="downloadFile">下載</li>
+            <li id="openFile">開啟</li>
+            <li id="deleteFile">刪除</li>
+            <li id="renameFile">重新命名</li>
+            <li id="fileProperties">屬性</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
